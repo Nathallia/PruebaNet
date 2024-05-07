@@ -42,7 +42,7 @@ jobs:
           dotnet-version: ${{ env.DOTNET_VERSION }}
           source-url: ${{ env.GITHUB_PACKAGE_REGISTRY_URL }}
         env:
-          NUGET_AUTH_TOKEN: ${{ secrets.P_TOKEN }}
+          NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       # Run dotnet build and package
       - name: dotnet build and publish
